@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
@@ -14,10 +15,14 @@ func main() {
 	secondNumber := oneNumber
 	for oneNumber > 0 {
 		for i := 0; i <= secondNumber; i++ {
-			if i != secondNumber {
-				fmt.Printf("#")
-			} else {
+			if i == 0 && oneNumber == secondNumber {
+				fmt.Printf(strings.Repeat(" ___", oneNumber))
 				fmt.Printf("\n")
+			}
+			if i != secondNumber {
+				fmt.Printf("|___")
+			} else {
+				fmt.Printf("|\n")
 			}
 		}
 		oneNumber -= 1
