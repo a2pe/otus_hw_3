@@ -13,18 +13,13 @@ func main() {
 	}
 
 	secondNumber := oneNumber
-	for oneNumber > 0 {
-		for i := 0; i <= secondNumber; i++ {
-			if i == 0 && oneNumber == secondNumber {
-				fmt.Printf(strings.Repeat(" ___", oneNumber))
-				fmt.Printf("\n")
-			}
-			if i != secondNumber {
-				fmt.Printf("|___")
-			} else {
-				fmt.Printf("|\n")
-			}
+	for i := 0; i < secondNumber; i++ {
+		if i%2 == 0 {
+			fmt.Printf(strings.Repeat(" #", secondNumber-1))
+			fmt.Printf("\n")
+		} else {
+			fmt.Printf(strings.Repeat("# ", secondNumber))
+			fmt.Printf("\n")
 		}
-		oneNumber -= 1
 	}
 }
