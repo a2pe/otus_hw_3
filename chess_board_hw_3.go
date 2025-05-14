@@ -15,7 +15,7 @@ func main() {
 	secondNumber := oneNumber
 	for i := 0; i < secondNumber; i++ {
 		if i%2 == 0 {
-			fmt.Printf(strings.Repeat(" #", secondNumber-1))
+			fmt.Printf(strings.Repeat(" #", secondNumber))
 			fmt.Printf("\n")
 		} else {
 			fmt.Printf(strings.Repeat("# ", secondNumber))
